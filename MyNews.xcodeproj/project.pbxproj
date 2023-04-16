@@ -18,6 +18,7 @@
 		567FCD0B29EC210D003540B3 /* MyNewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FCD0A29EC210D003540B3 /* MyNewsUITestsLaunchTests.swift */; };
 		567FCD1929EC2262003540B3 /* NewsInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FCD1829EC2262003540B3 /* NewsInfoModel.swift */; };
 		567FCD1C29EC2317003540B3 /* ApiIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FCD1B29EC2317003540B3 /* ApiIntegration.swift */; };
+		567FCD1F29EC2DFF003540B3 /* NewsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FCD1E29EC2DFF003540B3 /* NewsInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		567FCD0A29EC210D003540B3 /* MyNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		567FCD1829EC2262003540B3 /* NewsInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfoModel.swift; sourceTree = "<group>"; };
 		567FCD1B29EC2317003540B3 /* ApiIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiIntegration.swift; sourceTree = "<group>"; };
+		567FCD1E29EC2DFF003540B3 /* NewsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		567FCCE629EC210C003540B3 /* MyNews */ = {
 			isa = PBXGroup;
 			children = (
+				567FCD1D29EC2DD8003540B3 /* CustomCells */,
 				567FCD1A29EC22DB003540B3 /* ApiIntegration */,
 				567FCD1729EC2234003540B3 /* Models */,
 				567FCCE729EC210C003540B3 /* AppDelegate.swift */,
@@ -147,6 +150,14 @@
 				567FCD1B29EC2317003540B3 /* ApiIntegration.swift */,
 			);
 			path = ApiIntegration;
+			sourceTree = "<group>";
+		};
+		567FCD1D29EC2DD8003540B3 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				567FCD1E29EC2DFF003540B3 /* NewsInfoCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 				567FCCEC29EC210C003540B3 /* ViewController.swift in Sources */,
 				567FCCE829EC210C003540B3 /* AppDelegate.swift in Sources */,
 				567FCCEA29EC210C003540B3 /* SceneDelegate.swift in Sources */,
+				567FCD1F29EC2DFF003540B3 /* NewsInfoCell.swift in Sources */,
 				567FCD1C29EC2317003540B3 /* ApiIntegration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

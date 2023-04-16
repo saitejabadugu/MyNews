@@ -23,7 +23,7 @@ class NewsInfoVC: UIViewController {
         view.backgroundColor = .white
         self.title = "Info"//infoModel
         getNewsInfoModel()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.setUpTableView()
             self.setUpUI()
             self.setUpAutoLayout()
@@ -38,8 +38,7 @@ class NewsInfoVC: UIViewController {
     func setUpTableView() {
         infoTableView.delegate = self
         infoTableView.dataSource = self
-        //infoTableView.register(ItemInfoCell.self, forCellReuseIdentifier: ItemInfoCell.reuseIdentifier)
-        infoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "key")
+        infoTableView.register(NewsInfoCell.self, forCellReuseIdentifier: NewsInfoCell.reuseIdentifier)
 
     }
     
@@ -66,11 +65,10 @@ extension NewsInfoVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "key", for: indexPath) as? UITableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsInfoCell.reuseIdentifier, for: indexPath) as? NewsInfoCell else { return UITableViewCell() }
         let model = infoModel?.articles[indexPath.row]
-        cell.textLabel?.text = model?.source.name
-        //cell.backgroundColor = .red
-        //cell.configure(model: model)
+        cell.configure(model: model)
+        
         return cell
     }
     
